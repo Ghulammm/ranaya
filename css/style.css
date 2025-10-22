@@ -1306,17 +1306,14 @@ body {
 /* ---------------------------------- */
 .love-message {
     position: absolute;
-    /* Posisikan teks di kanan atas, dengan jarak 5vw dari kanan dan 5vh dari atas */
+    /* Posisikan teks di kanan atas, dengan jarak 2vw dari kanan dan 5vh dari atas */
     top: 5vh; 
-    left: auto; /* Memastikan properti left tidak mengganggu */
-    right: 5vw; /* 5% dari lebar viewport dari sisi kanan */
+    left: auto;
+    right: 2vw; /* DIUBAH: Menggeser teks lebih ke kanan (2% dari lebar viewport dari sisi kanan) */
     
-    /* Hapus translate(-50%, -50%). Hanya gunakan translate(0, 0) atau hapus,
-       karena kita tidak ingin centering, hanya ingin menggeser sedikit
-       agar tidak terlalu menempel di pojok (right: 5vw, top: 5vh) */
     transform: translate(0, 0); 
     
-    color: #ff0000;
+    color: #ffffff; /* DIUBAH: Mengubah warna teks menjadi putih */
     font-size: 5vw;
     font-family: sans-serif;
     text-shadow: 0 0 10px rgba(170, 150, 203, 0.7);
