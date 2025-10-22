@@ -1304,18 +1304,22 @@ body {
 /* ---------------------------------- */
 /* CSS UNTUK TEKS 'I LOVE U NAYAAA <3' */
 /* ---------------------------------- */
+/* ---------------------------------- */
+/* CSS UNTUK TEKS 'I LOVE U NAYAAA <3' */
+/* ---------------------------------- */
 .love-message {
     position: absolute;
     top: 50%;
     left: 50%;
-    transform: translate(-50%, -50%); /* Menempatkan teks tepat di tengah layar */
-    color: #d4a9d3; /* Warna pink cerah (Bisa diganti sesuai selera) */
-    font-size: 4vw; /* Ukuran teks yang besar dan responsif */
-    font-family: sans-serif; /* Ganti jika Anda menggunakan font khusus */
-    text-shadow: 0 0 10px rgba(170, 150, 203, 0.7); /* Efek glow */
-    z-index: 20; /* Nilai Z-index yang tinggi agar teks berada di atas semuanya */
-    opacity: 0; /* Mulai tersembunyi */
-    animation: text-fade-in 1s ease-out 1s forwards; /* Muncul setelah 1 detik */
+    transform: translate(-50%, -50%);
+    color: #d4a9d3;
+    /* UBAH UKURAN FONT DARI 4vw MENJADI 6vw */
+    font-size: 6vw; 
+    font-family: sans-serif;
+    text-shadow: 0 0 10px rgba(170, 150, 203, 0.7);
+    z-index: 20;
+    opacity: 0;
+    animation: text-fade-in 1s ease-out 1s forwards;
 }
 
 /* Animasi sederhana untuk memunculkan teks */
