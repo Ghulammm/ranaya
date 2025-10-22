@@ -1212,5 +1212,121 @@ body {
 .not-loaded * {
   animation-play-state: paused !important;
 }
+/* ---------------------------------------------------- */
+/* CSS UNTUK 5 FOTO YANG MUNCUL BERSAMAAN DI POSISI ACAL */
+/* ---------------------------------------------------- */
 
+.floating-photos {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    pointer-events: none; /* Agar tidak mengganggu klik pada konten lain */
+    z-index: 5; /* Di atas night, di bawah bunga */
+}
+
+.photo-item {
+    /* Menggunakan variabel yang didefinisikan di HTML */
+    position: absolute;
+    top: var(--top);
+    left: var(--left);
+    
+    /* Ukuran dan Bingkai Foto */
+    width: 200px; 
+    height: 200px;
+    border-radius: 10px; /* Sudut melengkung */
+    border: 5px solid #ffffff; /* Bingkai putih */
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.4); /* Efek bayangan */
+    background-size: cover;
+    background-position: center;
+    
+    /* Animasi Pop-In */
+    transform: scale(0); /* Mulai dari sangat kecil (tersembunyi) */
+    opacity: 0;
+    animation: pop-in 1s ease-out forwards; /* Animasi berdurasi 1 detik */
+    animation-delay: var(--delay); /* Menggunakan delay dari variabel HTML */
+    
+    /* Animasi Putar dan Hover (Efek Tambahan) */
+    transition: transform 0.3s ease;
+}
+
+/* Mendefinisikan Animasi Pop-In */
+@keyframes pop-in {
+    0% {
+        transform: scale(0);
+        opacity: 0;
+    }
+    100% {
+        transform: scale(1); /* Menjadi ukuran normal */
+        opacity: 1;
+    }
+}
+
+/* Efek sedikit memutar saat hover (opsional) */
+.photo-item:hover {
+    transform: scale(1.05) rotate(5deg); /* Sedikit membesar dan berputar */
+    z-index: 15; /* Agar tampak di atas foto lain saat di-hover */
+}
+
+/* Memberikan sedikit rotasi awal agar terlihat lebih artistik */
+.photo-item.photo-1 { transform: scale(0) rotate(-5deg); }
+.photo-item.photo-2 { transform: scale(0) rotate(10deg); }
+.photo-item.photo-3 { transform: scale(0) rotate(-15deg); }
+.photo-item.photo-4 { transform: scale(0) rotate(5deg); }
+.photo-item.photo-5 { transform: scale(0) rotate(-10deg); }
+
+/* Mengatur ulang animasi rotasi untuk rotasi awal */
+.photo-item.photo-1 { animation: pop-in-rotate 1s ease-out forwards; animation-delay: 0s; }
+.photo-item.photo-2 { animation: pop-in-rotate 1s ease-out forwards; animation-delay: 0.2s; }
+.photo-item.photo-3 { animation: pop-in-rotate 1s ease-out forwards; animation-delay: 0.4s; }
+.photo-item.photo-4 { animation: pop-in-rotate 1s ease-out forwards; animation-delay: 0.6s; }
+.photo-item.photo-5 { animation: pop-in-rotate 1s ease-out forwards; animation-delay: 0.8s; }
+
+
+@keyframes pop-in-rotate {
+    0% {
+        transform: scale(0);
+        opacity: 0;
+    }
+    100% {
+        transform: scale(1) rotate(var(--initial-rotate, 0deg)); /* Mempertahankan rotasi awal */
+        opacity: 1;
+    }
+}
+
+/* Definisi rotasi awal (opsional tapi bagus) */
+.photo-item.photo-1 { --initial-rotate: -5deg; }
+.photo-item.photo-2 { --initial-rotate: 10deg; }
+.photo-item.photo-3 { --initial-rotate: -15deg; }
+.photo-item.photo-4 { --initial-rotate: 5deg; }
+.photo-item.photo-5 { --initial-rotate: -10deg; }
+/* ---------------------------------- */
+/* CSS UNTUK TEKS 'I LOVE U NAYAAA <3' */
+/* ---------------------------------- */
+.love-message {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); /* Menempatkan teks tepat di tengah layar */
+    color: #d4a9d3; /* Warna pink cerah (Bisa diganti sesuai selera) */
+    font-size: 4vw; /* Ukuran teks yang besar dan responsif */
+    font-family: sans-serif; /* Ganti jika Anda menggunakan font khusus */
+    text-shadow: 0 0 10px rgba(170, 150, 203, 0.7); /* Efek glow */
+    z-index: 20; /* Nilai Z-index yang tinggi agar teks berada di atas semuanya */
+    opacity: 0; /* Mulai tersembunyi */
+    animation: text-fade-in 1s ease-out 1s forwards; /* Muncul setelah 1 detik */
+}
+
+/* Animasi sederhana untuk memunculkan teks */
+@keyframes text-fade-in {
+    0% {
+        opacity: 0;
+        transform: translate(-50%, -50%) scale(0.8);
+    }
+    100% {
+        opacity: 1;
+        transform: translate(-50%, -50%) scale(1);
+    }
+}
 /*# sourceMappingURL=style.css.map */

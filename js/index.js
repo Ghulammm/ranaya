@@ -1,5 +1,5 @@
 const title = document.querySelector('.title')
-const text = `I Have Something`.split('')
+const text = `I Have Something For`.split('')
 
 // Create container for better responsive layout
 title.style.display = 'flex'
@@ -20,3 +20,14 @@ textElements.forEach((element) => {
   const randomDelay = Math.random() * 3;
   element.style.animationDelay = `${randomDelay}s`;
 });
+
+// ✅ Tambahkan slot untuk gambar di sebelah tulisan
+const img = document.createElement('img');
+img.src = 'naya2.png'; // ganti dengan path gambarmu
+img.alt = 'icon';
+img.style.width = '80px';
+img.style.height = '80px';
+img.style.objectFit = 'contain';
+img.style.marginLeft = '0.5rem';
+title.appendChild(img);
+
