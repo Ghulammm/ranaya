@@ -1232,20 +1232,28 @@ body {
     top: var(--top);
     left: var(--left);
     
+   .photo-item {
+    /* Menggunakan variabel yang didefinisikan di HTML */
+    position: absolute;
+    top: var(--top);
+    left: var(--left);
+    
     /* Ukuran dan Bingkai Foto */
-    width: 200px; 
-    height: 200px;
-    border-radius: 10px; /* Sudut melengkung */
-    border: 5px solid #ffffff; /* Bingkai putih */
-    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.4); /* Efek bayangan */
+    /* UBAH INI: Perkecil ukuran foto */
+    width: 150px; /* Sebelumnya 200px */
+    height: 150px; /* Sebelumnya 200px */
+    
+    border-radius: 10px;
+    border: 5px solid #ffffff;
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.4);
     background-size: cover;
     background-position: center;
     
     /* Animasi Pop-In */
-    transform: scale(0); /* Mulai dari sangat kecil (tersembunyi) */
+    transform: scale(0);
     opacity: 0;
-    animation: pop-in 1s ease-out forwards; /* Animasi berdurasi 1 detik */
-    animation-delay: var(--delay); /* Menggunakan delay dari variabel HTML */
+    animation: pop-in 1s ease-out forwards;
+    animation-delay: var(--delay);
     
     /* Animasi Putar dan Hover (Efek Tambahan) */
     transition: transform 0.3s ease;
@@ -1314,7 +1322,7 @@ body {
     transform: translate(-50%, -50%);
     color: #d4a9d3;
     /* UBAH UKURAN FONT DARI 4vw MENJADI 6vw */
-    font-size: 6vw; 
+    font-size: 10vw; 
     font-family: sans-serif;
     text-shadow: 0 0 10px rgba(170, 150, 203, 0.7);
     z-index: 20;
