@@ -1309,8 +1309,8 @@ body {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%); /* Menempatkan teks tepat di tengah layar */
-    color: #d4a9d3; /* Warna pink cerah (Bisa diganti sesuai selera) */
-    font-size: 10vw; /* Ukuran teks yang besar dan responsif */
+    color: #e0e0e0; /* Warna pink cerah (Bisa diganti sesuai selera) */
+    font-size: 8vw; /* Ukuran teks yang besar dan responsif */
     font-family: sans-serif; /* Ganti jika Anda menggunakan font khusus */
     text-shadow: 0 0 10px rgba(170, 150, 203, 0.7); /* Efek glow */
     z-index: 20; /* Nilai Z-index yang tinggi agar teks berada di atas semuanya */
