@@ -1309,7 +1309,7 @@ body {
     /* Posisikan teks di kanan atas, dengan jarak 2vw dari kanan dan 5vh dari atas */
     top: 5vh; 
     left: auto;
-    right: 2vw; /* DIUBAH: Menggeser teks lebih ke kanan (2% dari lebar viewport dari sisi kanan) */
+    right: 0,2vw; /* DIUBAH: Menggeser teks lebih ke kanan (2% dari lebar viewport dari sisi kanan) */
     
     transform: translate(0, 0); 
     
