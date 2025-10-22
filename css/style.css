@@ -1306,16 +1306,23 @@ body {
 /* ---------------------------------- */
 .love-message {
     position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%); /* Menempatkan teks tepat di tengah layar */
-    color: #e0e0e0; /* Warna pink cerah (Bisa diganti sesuai selera) */
-    font-size: 5vw; /* Ukuran teks yang besar dan responsif */
-    font-family: sans-serif; /* Ganti jika Anda menggunakan font khusus */
-    text-shadow: 0 0 10px rgba(170, 150, 203, 0.7); /* Efek glow */
-    z-index: 20; /* Nilai Z-index yang tinggi agar teks berada di atas semuanya */
-    opacity: 0; /* Mulai tersembunyi */
-    animation: text-fade-in 1s ease-out 1s forwards; /* Muncul setelah 1 detik */
+    /* Posisikan teks di kanan atas, dengan jarak 5vw dari kanan dan 5vh dari atas */
+    top: 5vh; 
+    left: auto; /* Memastikan properti left tidak mengganggu */
+    right: 5vw; /* 5% dari lebar viewport dari sisi kanan */
+    
+    /* Hapus translate(-50%, -50%). Hanya gunakan translate(0, 0) atau hapus,
+       karena kita tidak ingin centering, hanya ingin menggeser sedikit
+       agar tidak terlalu menempel di pojok (right: 5vw, top: 5vh) */
+    transform: translate(0, 0); 
+    
+    color: #e0e0e0;
+    font-size: 5vw;
+    font-family: sans-serif;
+    text-shadow: 0 0 10px rgba(170, 150, 203, 0.7);
+    z-index: 20;
+    opacity: 0;
+    animation: text-fade-in 1s ease-out 1s forwards;
 }
 
 /* Animasi sederhana untuk memunculkan teks */
